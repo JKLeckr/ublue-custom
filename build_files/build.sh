@@ -35,5 +35,33 @@ dnf5 remove -y firefox
 
 dnf5 install -y tmux vim
 
+## Setup DMS
+
+dnf5 -y install dnf-plugins-core
+
+dnf5 -y copr enable avengemedia/dms
+dnf5 -y copr enable avengemedia/danklinux
+dnf5 -y copr enable yalter/niri
+
+# Add Packages:
+
+dnf5 install -y libwayland-server
+
+dnf5 install -y git xdg-desktop-portal-gtk accountsservice xwayland-satellite
+
+dnf5 install -y --setopt=install_weak_deps=False niri
+dnf5 install -y dms dms-greeter matugen quickshell danksearch ghostty
+dnf5 install -y dankcalendar-git
+
+dnf5 install -y tuned-ppd cups-pk-helper kf6-kimageformats i2c-tools khal adw-gtk3-theme
+
+systemctl --global add-wants niri.service dms.service
+systemctl --global enable dsearch.service
+systemctl enable greetd.service
+
+## Additional setup
+
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
 ## Cleanup
 dnf5 clean -y all
