@@ -62,10 +62,12 @@ systemctl enable greetd.service
 
 ## Install Apps
 dnf5 install -y nautilus nautilus-python
-mkdir -p /usr/local/share/nautilus-python/extensions
-curl https://raw.githubusercontent.com/ghostty-org/ghostty/refs/heads/main/dist/linux/ghostty_nautilus.py > /usr/local/share/nautilus-python/extensions/ghostty.py
 
-## Set up flatpaks
+dnf5 install -y gnome-text-editor
+
+dnf5 install -y firefox
+
+## Set up flatpak
 
 ## Additional setup
 
