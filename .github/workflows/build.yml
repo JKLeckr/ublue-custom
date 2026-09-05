@@ -5,12 +5,14 @@ on:
     branches:
       - main
       - base
+      - base-dms
   schedule:
     - cron: '05 10 * * *'  # 10:05am UTC everyday
   push:
     branches:
       - main
       - base
+      - base-dms
     paths-ignore:
       - '**/README.md'
   workflow_dispatch:
@@ -18,7 +20,7 @@ on:
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
 
-  DEPLOY_BRANCHES: '["main", "base"]'
+  DEPLOY_BRANCHES: '["main", "base", "base-dms"]'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.brand_name}}-${{ inputs.stream_name }}
