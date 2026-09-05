@@ -55,6 +55,7 @@ dnf5 install -y dankcalendar-git
 
 dnf5 install -y tuned-ppd cups-pk-helper kf6-kimageformats i2c-tools khal adw-gtk3-theme
 
+systemctl --global enable dms-init.service
 systemctl --global add-wants niri.service dms.service
 systemctl --global enable dsearch.service
 systemctl enable greetd.service

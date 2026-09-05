@@ -1,0 +1,12 @@
+[Unit]
+Description=Initialize DMS configuration
+Before=graphical-session-pre.target
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/dms-init/dms-init.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical-session-pre.target
