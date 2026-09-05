@@ -60,6 +60,13 @@ systemctl --global add-wants niri.service dms.service
 systemctl --global enable dsearch.service
 systemctl enable greetd.service
 
+## Install Apps
+dnf5 install -y nautilus nautilus-python
+mkdir -p /usr/local/share/nautilus-python/extensions
+curl https://raw.githubusercontent.com/ghostty-org/ghostty/refs/heads/main/dist/linux/ghostty_nautilus.py > /usr/local/share/nautilus-python/extensions/ghostty.py
+
+## Set up flatpaks
+
 ## Additional setup
 
 glib-compile-schemas /usr/share/glib-2.0/schemas/
