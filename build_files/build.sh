@@ -49,6 +49,8 @@ dnf5 install -y libwayland-server
 
 dnf5 install -y git xdg-desktop-portal-gtk accountsservice xwayland-satellite
 
+dnf5 install -y xdg-user-dirs-gtk
+
 dnf5 install -y --setopt=install_weak_deps=False niri
 dnf5 install -y dms dms-greeter matugen quickshell danksearch ghostty
 dnf5 install -y dankcalendar-git
