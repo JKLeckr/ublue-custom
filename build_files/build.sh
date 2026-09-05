@@ -53,7 +53,7 @@ dnf5 install -y --setopt=install_weak_deps=False niri
 dnf5 install -y dms dms-greeter matugen quickshell danksearch ghostty
 dnf5 install -y dankcalendar-git
 
-dnf5 install -y tuned-ppd cups-pk-helper kf6-kimageformats i2c-tools khal adw-gtk3-theme
+dnf5 install -y tuned-ppd cups-pk-helper kf6-kimageformats i2c-tools khal adw-gtk3-theme fprintd
 
 systemctl --global enable dms-init.service
 systemctl --global add-wants niri.service dms.service
