@@ -19,6 +19,7 @@ on:
     branches:
       - main
       - base
+      - base-dms
     paths:
       - './disk_config/disk.toml'
       - './disk_config/iso.toml'
